@@ -16,9 +16,7 @@ if(!isset($_SESSION['arena'])){
   $robotA = new Robot\Roger("A");
   $robotB = new Robot\MadShooter("B");
   $arena->loadRobots([$robotA,$robotB]);
-}else{
-  $arena = unserialize($_SESSION['arena']);
-}
+
 
 try{
   $turn_report = $arena->turn();
